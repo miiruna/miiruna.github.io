@@ -1,0 +1,232 @@
+@media only screen {
+    body{
+        margin: 20px 0;
+        background: linear-gradient(135deg, #dfe9f3, #dda0dd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        position: fixed;
+        top: 0px;
+        background-color: #301a6e;
+        width: 100%;
+        height: max-content;
+        padding-bottom: 10px;
+        z-index: 1000;  
+    }
+
+    @keyframes logo {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
+    #logo {
+        text-transform: uppercase;
+        background-image: linear-gradient(-225deg, #400395 0%, #df8dd9 29%, #3ccae3 67%, #9e90f9 100%);
+        background-size: auto auto;
+        background-clip: border-box;
+        color: #fff;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: logo 2s ease-in-out 2;
+        animation-delay: 1s;
+        text-align: center;
+        
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    .dropdown span {
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #763a9e;
+        color: #df8dd9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown-content p {
+        white-space: nowrap;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    .navbar {
+        background-color: #301a6e;
+        padding: 1em 0;
+        
+    }
+    
+    
+    .menu {
+        list-style-type: none;
+        display: flex;
+        justify-content: center; 
+        
+    }
+    
+    
+    .menu li {
+        margin: 0 15px; 
+    }
+    
+   
+    .menu a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        transition: color 0.3s;
+    }
+    
+    
+    .menu a:hover {
+        color: #dc69c3; 
+    }
+
+    span {
+        text-decoration: none;
+        color: #f00;
+        font-size: 0.7em;
+        transition: color 0.3s;
+    }
+
+    #carti {
+        color: #ffffff;
+        font-size: 1.2em;
+    }
+
+    #formular{
+        min-height: 60vh;
+    }
+    
+    .form-error{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        max-width: 900px;
+        background: #ffffff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 125px;
+        font-family: Fira Mono, monospace;
+        margin-bottom: 50px;
+    }
+
+    .form-container{
+        display: flex;
+        width: 800px;
+    }
+
+    label{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        
+    }
+
+    .general{
+        flex: 1;
+        padding: 20px;
+        color: #663399;
+    }
+
+    .general div, .contact div{
+        margin-bottom: 15px;
+    }
+
+    .general h2{
+        margin-bottom: 50px;
+    }
+
+    .contact{
+        flex: 1;
+        padding: 20px;
+        background: #663399;
+        color: #ffffff;
+    }
+
+    .contact h2{
+        margin-bottom: 50px;
+    }
+
+    input, select, button {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #ffffff;
+        color: #663399;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #dda0dd;
+    }
+
+}
+@media (max-width: 480px) {
+    .article-container {
+        width: 480px;
+    }
+    .menu {
+        flex-direction: column; 
+        align-items: center;
+    }
+    
+    .menu li {
+        margin: 10px 0;
+    }
+}
+
+

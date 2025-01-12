@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Proiect TehniciWeb Contact</title>
+        <link rel="stylesheet" href="contact-style.css">
+        <meta charset="utf-8">
+        <meta name="autor" content="Maxim Miruna-Bianca">
+        <meta name="description" content="">
+        <meta name="keywords" content="Newsletter">
+        <link rel="icon" type="image/x-icon" href="StephanieGarber.jpg">
+        <script type="text/javascript" src="contact.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="dropdown">
+                        <span id="carti">Carti</span>
+                        <div class="dropdown-content">
+                            <p><a href="Caraval.html">Caraval</a></p>
+                            <p><a href="OUABH.html">Once Upon a Broken Heart</a></p>
+                        </div>
+                    </li>
+                    <li><a href="home.html">Despre autor</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <h1 id="logo">Newsletter</h1>
+        </header>
+        <main>
+            <div class="container">
+                <form onsubmit="formSubmit(this)" id="formular">
+                    <div class="form-container">
+                        <div class="general" id="general">
+                            <h2>Informatii generale</h2>
+                            <div>
+                                <label for="fullname">
+                                    Nume
+                                </label>
+                                <input type="text" name="fullname" id="fullname" onblur="validareNotEmpty('fullname')">
+                                <span class="form-error" id="fullname_error">
+                                    Campul este obligatoriu!
+                                </span>
+                            </div>
+                            <div>
+                                <label for="name">
+                                    Prenume
+                                </label>
+                                <input type="text" name="name" id="name" onblur="validareNotEmpty('name')">
+                                <span class="form-error" id="name_error">
+                                    Campul este obligatoriu!
+                                </span>
+                            </div>
+                            <div>
+                                <label for="mc">
+                                    Sex
+                                </label>
+                                <select name="mc" id="mc">   
+                                    <option value="1">
+                                        Femeie
+                                    </option>
+                                    <option value="2">
+                                        Barbat
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="contact" id="contact">
+                            <h2>Informatii de contact</h2>
+                            <div>
+                                <label for="email">
+                                    Adresa de mail
+                                </label>
+                                <input type="text" name="email" id="email" onblur="validareEmail('email')">
+                                <span class="form-error" id="email_error">
+                                    Adresa este invalida!
+                                </span>
+                            </div>
+                            <div>
+                                <label for="phone">
+                                    Numar de telefon
+                                </label>
+                                <input type="text" name="phone" id="phone" onblur="validareNotEmpty('phone')">
+                                <span class="form-error" id="phone_error">
+                                    Campul este obligatoriu!
+                                </span>
+                            </div>
+                            <div>
+                                <label for="tara">
+                                    Tara de provenienta
+                                </label>
+                                <input type="text" name="tara" id="tara" onblur="validareNotEmpty('tara')">
+                                <span class="form-error" id="tara_error">
+                                    Campul este obligatoriu!
+                                </span>
+                            </div>
+                            <div>
+                                <label for="oras">
+                                    Oras
+                                </label>
+                                <input type="text" name="oras" id="oras" onblur="validareNotEmpty('oras')">
+                                <span class="form-error" id="oras_error">
+                                    Campul este obligatoriu!
+                                </span>
+                            </div>
+                            <div>
+                                <button type="submit">Buton</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <button onClick="changeColor()">🌑</button>
+            </div>
+        </main>
+    </body>
+</html>
